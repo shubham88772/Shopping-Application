@@ -17,17 +17,12 @@ public class ProductController {
     private ProductService productService;
 
 
-//    @PostMapping("/create")
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public void createProduct(@RequestBody ProductRequest productRequest){
-//        productService.createProduct(productRequest);
-//    }
-
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createProduct(@RequestBody Product product){
-        productService.createProduct(product);
+    public void createProduct(@RequestBody ProductRequest productRequest){
+        productService.createProduct(productRequest);
     }
+
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)

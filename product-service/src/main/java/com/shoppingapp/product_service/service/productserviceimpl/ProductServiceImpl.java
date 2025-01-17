@@ -21,15 +21,11 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ModelMapper modelMapper;
     @Override
-//    public void createProduct(ProductRequest productRequest) {
-//        Product toProduct=modelMapper.map(productRequest,Product.class);
-//        Product save = productRepository.save(toProduct);
-////        log.info("Product is saved");
-//    }
-    public void createProduct(Product product) {
-        productRepository.save(product);
+    public void createProduct(ProductRequest productRequest) {
+        Product toProduct=modelMapper.map(productRequest,Product.class);
+        Product save = productRepository.save(toProduct);
+//        log.info("Product is saved");
     }
-
     @Override
     public List<ProductResponse> getAllProducts() {
         List<Product> all = productRepository.findAll();
