@@ -1,5 +1,9 @@
 package com.shoppingapp.inventory_service.service;
 
+import com.shoppingapp.inventory_service.dto.InventoryResponse;
+
+import java.util.List;
+
 public interface InventoryService {
-    public boolean isInStock(String skuCode);
+    public List<InventoryResponse> isInStock(List<String> skuCode);
 }
